@@ -1,9 +1,10 @@
+/* reset de página */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* utilizado está font-size no root para que a alteração de px para rem seja mais fácil perante os dados colhidos no figma */
 :root {
     font-size: 62.5%;
 }
@@ -31,7 +32,7 @@ a:hover {
 #page {
     height: 100vh;
 }
-
+/* foi criada uma classe utilitária para aplicação do Flexbox */
 .flex {
     display: flex;
 }
@@ -67,7 +68,7 @@ h1 + p {
 form {
     margin-top: 4rem;
 }
-
+/* aplicado position relative para que possamos utilizar position absolute no filho */
 .input-wrapper {
     position: relative;
 }
@@ -101,7 +102,7 @@ input:hover {
     outline: 0;
 }
 
-/* + significa anterior a tal */
+/* '+' significa anterior a ao primeiro setado */
 form .input-wrapper + .input-wrapper {
     margin-top: 1.6rem;
 }
@@ -110,7 +111,7 @@ form .input-wrapper + .input-wrapper {
     justify-content: space-between;
 }
 
-.label-wrapper label+a {
+.label-wrapper label + a {
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 2.1rem;
@@ -120,7 +121,7 @@ form .input-wrapper + .input-wrapper {
 ::-ms-reveal {
     display: none;
 }
-
+/* position absolute para que ele possa ser alocado devidamente em cima do elemento pai */
 .eye {
     position: absolute;
     top: 56%;
